@@ -828,3 +828,44 @@ body.view-control-buttons .viewControlButton {
 .viewControlButton-6 {
   margin-left: 105px;
 }
+
+/* MONO Arquitectura · Personalización visual no destructiva */
+:root { --mono-yellow:#FFB521; --mono-black:#171717; }
+#titleBar .sceneName { background:rgba(23,23,23,.88); font-weight:600; letter-spacing:.13em; font-size:12px; border-bottom:2px solid var(--mono-yellow); }
+#sceneListToggle, #fullscreenToggle, #autorotateToggle, .viewControlButton { background-color:rgba(23,23,23,.83) !important; }
+#sceneList .scenes { background:rgba(23,23,23,.95); }
+#sceneList .scene { border-left:3px solid transparent; }
+#sceneList .scene.current { border-left-color:var(--mono-yellow); background:rgba(255,181,33,.13); }
+#sceneList .scene:hover { background:rgba(255,181,33,.17); }
+.link-hotspot-icon { filter: sepia(1) saturate(4) hue-rotate(345deg) brightness(1.2); }
+.link-hotspot-tooltip, .info-hotspot-text { background:rgba(23,23,23,.93); border:1px solid rgba(255,181,33,.5); }
+.mono-brand { position:absolute;left:22px;bottom:24px;z-index:5;pointer-events:none;padding:12px 17px 11px;background:rgba(23,23,23,.87);border-left:3px solid var(--mono-yellow);box-shadow:0 5px 24px rgba(0,0,0,.15); }
+.mono-wordmark {font-size:25px;font-weight:750;line-height:1;letter-spacing:.045em;color:white;}
+.mono-wordmark span {color:var(--mono-yellow);}
+.mono-subtitle {font-size:8px;letter-spacing:.18em;margin-top:7px;color:#dedede;}
+.mono-project {position:absolute;top:54px;right:15px;z-index:4;pointer-events:none;background:rgba(23,23,23,.83);padding:11px 15px;text-align:right;display:flex;flex-direction:column;gap:4px;}
+.mono-accent {color:var(--mono-yellow);font-size:13px;font-weight:700;letter-spacing:.13em;}
+.mono-project-detail {color:white;font-size:9px;letter-spacing:.13em;}
+.mono-help {position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:4;pointer-events:none;background:rgba(23,23,23,.7);border-radius:4px;padding:9px 13px;color:#fff;font-size:10px;letter-spacing:.08em;white-space:nowrap;}
+.mono-help span {color:var(--mono-yellow);}
+@media(max-width:700px) { .mono-brand{left:10px;bottom:12px;padding:9px 11px;} .mono-wordmark{font-size:19px;} .mono-subtitle{font-size:6px;} .mono-project{top:58px;right:8px;padding:8px 10px;} .mono-accent{font-size:11px;} .mono-project-detail{font-size:8px;} .mono-help{display:none;} }
+
+/* MONO showroom welcome and identity */
+.mono-welcome{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:linear-gradient(125deg,rgba(11,12,14,.97),rgba(23,24,26,.94));color:#fff;text-align:center;padding:24px;box-sizing:border-box;transition:opacity .4s ease,visibility .4s ease;overflow:auto}
+.mono-welcome-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.mono-welcome-inner{width:min(100%,520px);margin:auto;padding:32px 16px}
+.mono-welcome-logo{width:112px;height:112px;object-fit:contain;border-radius:50%;margin:0 auto 16px;display:block}
+.mono-welcome-brand{font:700 18px/1.2 Arial,sans-serif;letter-spacing:.27em}
+.mono-welcome-brand span{display:block;font-size:9px;font-weight:400;letter-spacing:.34em;margin-top:7px;color:#bdbdbd}
+.mono-welcome-rule{height:2px;width:38px;background:#ffb521;margin:38px auto 28px}
+.mono-welcome-kicker{font:500 11px/1.5 Arial,sans-serif;letter-spacing:.25em;color:#ffb521;margin:0 0 10px}
+.mono-welcome h1{font:300 clamp(42px,8vw,76px)/1.1 Arial,sans-serif;letter-spacing:.08em;margin:0 0 14px}
+.mono-welcome-desc{font:400 15px/1.6 Arial,sans-serif;color:#ccc;margin:0 0 36px}
+.mono-welcome-start{display:inline-flex;align-items:center;justify-content:center;gap:22px;background:#ffb521;color:#111;border:0;border-radius:2px;padding:17px 25px;min-height:54px;font:700 12px/1 Arial,sans-serif;letter-spacing:.12em;cursor:pointer;transition:background .2s,transform .2s}
+.mono-welcome-start:hover,.mono-welcome-start:focus-visible{background:#ffd071;transform:translateY(-2px)}
+.mono-welcome-start span{font-size:20px;font-weight:400}
+.mono-welcome-hint{font:400 11px/1.6 Arial,sans-serif;color:#999;margin:28px auto 0}
+.mono-header-logo{width:42px;height:42px;object-fit:contain;border-radius:50%;flex-shrink:0}
+.mono-brand{display:flex!important;align-items:center;gap:10px}
+.mono-brand-copy{display:flex;flex-direction:column}
+@media(max-width:600px){.mono-welcome-inner{padding:18px 4px}.mono-welcome-logo{width:90px;height:90px}.mono-welcome-rule{margin:28px auto 22px}.mono-welcome-desc{margin-bottom:28px}.mono-header-logo{width:34px;height:34px}}
